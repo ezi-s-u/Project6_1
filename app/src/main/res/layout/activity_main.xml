@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="20dp"
     tools:context=".MainActivity">
 
     <Chronometer
@@ -15,16 +14,11 @@
         android:layout_height="wrap_content"
         android:format="예약에 걸린 시간: %s"
         android:textSize="25sp"
-        android:textStyle="bold"
+        android:textColor="@color/red"
+        android:background="@color/gray"
         android:gravity="center_horizontal"/>
 
-    <Button
-        android:id="@+id/btnStart"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_start"
-        android:textSize="20sp"
-        android:padding="10dp"/>
+
 
     <RadioGroup
         android:id="@+id/rg"
@@ -49,9 +43,10 @@
         android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <CalendarView
+        <DatePicker
             android:id="@+id/calendar"
             android:layout_width="match_parent"
+            android:datePickerMode="spinner"
             android:layout_height="wrap_content"/>
         <TimePicker
             android:id="@+id/timePicker"
@@ -64,20 +59,14 @@
         android:layout_height="match_parent"
         android:gravity="bottom"
         android:orientation="horizontal">
-        <Button
-            android:id="@+id/btnDone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_done"
-            android:layout_marginLeft="10dp"
-            android:textSize="20sp"
-            android:padding="10dp"/>
         <TextView
             android:id="@+id/textResult"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="15sp"
-            android:layout_marginLeft="20sp"
+            android:textColor="@color/black"
+            android:background="@color/gray"
+            android:gravity="center"
             android:text="2023년 1월 14일 12시 30분 예약함"/>
     </LinearLayout>
 </LinearLayout>
